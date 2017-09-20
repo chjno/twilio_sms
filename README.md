@@ -26,5 +26,3 @@ Code for the Node server was taken from Twilio's [Receive and Reply to SMS and M
 
 
 ***If running your server locally, don't forget to update your TwiML App settings every time you restart ngrok.**
-
-****ngrok may not work well depending on the network your computer is using. Hosting your server in the cloud may be a more reliable solution.**
