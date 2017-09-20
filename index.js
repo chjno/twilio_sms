@@ -5,8 +5,6 @@ var app = express();
 var twiml = require('twilio').twiml;
 var bodyParser = require('body-parser');
 
-var io = require('socket.io');
-
 // for parsing incoming http requests (SMS/Voice)
 app.use(bodyParser());
 
