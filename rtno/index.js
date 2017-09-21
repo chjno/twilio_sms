@@ -10,12 +10,9 @@ var app = express();
 app.use(express.static(path.join(__dirname, '/')));
 app.use(bodyParser());
 
-app.get('/', function (req, res){
-  res.sendFile('./index.html');
-});
-
 app.post('/', function (req, res) {
   var msg = req.body.Body.toLowerCase().split(' ');
+  console.log(msg);
   switch (msg[0]){
     case 'up':
       camera('move', 'up');
@@ -46,7 +43,7 @@ app.post('/', function (req, res) {
 
 function camera(action, value){
   request('http://172.22.151.16/axis-cgi/com/ptz.cgi?' + action + '=' + value, function (error, response, body) {
-    console.log('error:', error); 
+    console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
   });
 }
